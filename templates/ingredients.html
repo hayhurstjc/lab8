@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<header>
+	<title>Sourdough Ingredients</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</header>
+
+<body>
+	<h1>Sourdough Bread Loaves</h1>
+	<h2>Ingredients</h2>
+	<h3>Materials</h3>
+	<ul>
+		<li><a target="_blank" href="https://www.amazon.com/KUBEI-Upgraded-Digital-Precision-Electronic/dp/B07YKCFJHQ/">Kitchen Scale</a></li>
+		<li><a target="_blank" href="https://www.amazon.com/Forsun-Banneton-Brotform-Proofing-Rising/dp/B01CNV40D6/">Bannetons</a></li>
+		<li><a target="_blank" href="https://www.amazon.com/GERMAIN-Premium-Crafted-Blades-Included/dp/B01LY7NDQ9/">Lame</a></li>
+	</ul>
+	<h3>Levain</h3>
+	<ul>
+		<li>25g starter</li>
+		<li>75g bread flour</li>
+		<li>75g water</li>
+	</ul>
+	<h3>Dough</h3>
+	<ul>
+		<li>700g Bread Flour</li>
+		<li>300g Wheat Flour</li>
+		<li>750g Water</li>
+		<li>150g levain</li>
+		<li>20g salt</li>
+	</ul>
+
+	<h2>Recipe</h2>
+
+	<a href="{{ url_for('index') }}">Main</a><br>
+	<a href="{{ url_for('sourdough') }}">Recipe Introduction</a><br>
+	<a href="{{ url_for('sourdough_instructions') }}">Recipe Instructions</a>
+</body>
+</html>

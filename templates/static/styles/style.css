@@ -1,0 +1,30 @@
+
+h1 {
+color: brown;
+font-size: 50px;
+margin: 0px;
+background-color: lightgrey;
+text-align: center;
+}
+
+h2 {
+color: black;
+font-size: 30px;
+margin: 10px;
+background-color: gray;
+text-align: left;
+}
+
+p {
+color: #000; /*black text*/
+background-color: orange;
+text-align: center;
+}
+
+body{
+color: white;
+font-size: 20px;
+margin: 0px;
+background-color: tan;
+text-align: left;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Login for the website</title>
+
+    <style type="text/css">
+        .fit {
+        max-width: 99%;
+        max-height: 99%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Joshwah Bakes</h1>
+    {% block content%}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    {% endblock %}
+
+
+    <center><img class="fit" src="./static/images/jaffa-cupcakes.jpg"></center>
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <table>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td colspan='2'><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="{{ url_for('register') }}">Register for an account</a><br>
+    <a href="{{ url_for('recover') }}">Reset your password</a>
+</body>
+</html>

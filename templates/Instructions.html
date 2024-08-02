@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<header>
+	<title>Sourdough Instructions</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+</header>
+
+<body> <!-- How do you target individual headers inside the body? -->
+	<h1>Sourdough Bread Loaves</h1>
+	<h2>Instructions</h2>
+	<p>
+		<h3>Levain</h3> <!--levain instructions in its own ordered list-->
+		<ol>
+			<li>Prep Levain approximately 3-6 hours before mixing dough. Mix 25g starter with 75g water and 75g bread flour.</li>
+			<li>Set aside and let rise until doubled in size.</li>
+			<li><b>Optional:</b> Test your levain by placing a small bit in a glass of water. If the levain floats then it is ready.</li>
+		</ol>
+		<h3>Dough</h3> <!--dough instructions in its own ordered list-->
+		<ol>
+			<li>Mix 700g Bread Flour, 300g Wheat Flour, and 750g Water together until well mixed and flour is wet.</li>
+			<li>Autolyse dough for 1 hour in a bowl covered with a damp towel until it passes the window pane test.</li>
+			<li>Mix in levain and starter until well combined.</li>
+			<li>Bulk ferment by shaping and rest in covered bowl for 15-30 minutes and then performing a series of pull and tucks.</li>
+			<li>Pull each side up and over until it is fully stretched. Tuck into the opposite side. Repeat this step until each side has been stretched then let rest for 30 mins.</li>
+			<li>Repeat the above step for 3 hours or until dough is ready.</li>
+			<li>Divide the dough in half, shape, and place each half into a banneton.</li>
+			<li>Dust with flour and place in the fridge, covered, overnight.</li>
+			<li>Remove dough from the fridge and rest on counter for approximately 1 hour.</li>
+			<li>Pre-heat oven to 450 while the dough is resting.</li>
+			<li>Flip dough onto parchment paper and cut with lame to allow for expansion.</li>
+			<li>Baked covered in a dutch oven for 25 minutes, then uncovered for another 25 minutes until desired color.</li>
+			<li>Cool on wire rack before cutting into loaf.</li>
+
+		</ol>
+	</p>
+	<h2>Recipe</h2> <!--links back to other pages-->
+	<a href="{{ url_for('index') }}">Main</a><br>
+	<a href="{{ url_for('sourdough') }}">Recipe Introduction</a><br>
+	<a href="{{ url_for('sourdough_ingredients') }}">Recipe Ingredients</a>
+</body>
+</html>

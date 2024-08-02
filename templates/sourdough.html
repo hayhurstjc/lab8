@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<header>
+	<title>Sourdough Bread</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</header>
+
+<body>
+	<h1>Sourdough Bread</h1>
+	<p>Early settlers in the West, especially those adventurers who traveled north to Alaska, relied on sourdough to leaven bread before commercial baking powder and yeast were readily available.</p>
+	<p>"Sourdough" even became the nickname for California Klondike miners at the turn of the last century because they carried starter in their backpacks to make bread without having to find a town, let alone yeast.</p>
+	<p>Vermont's King Arthur Flour offers a history of sourdough, including notes from the son of an Alaskan miner. The son writes that every miner's cabin had a "tin full of fermented dough, used in place of yeast in making bread, biscuits and flapjacks" hanging over the hot stove. Alaskan miners supposedly slept with their beloved starters to keep them from freezing in the north country's frigid climate.</p>
+	<p>The history of sourdough, however, begins long before miners came to Alaska. Sourdough is the oldest form of leavened bread and was used at least as early as ancient Egypt. It was probably discovered by accident when bread dough was left out and good microorganisms -- wild yeast -- drifted into the mix. The resulting bread had a lighter texture and better taste.</p>
+	<p>All sourdough recipes begin with a starter -- a mixture of flour, water and a little sugar. Sitting at room temperature, wild yeasts in the air and on the grain settle into the mix. The fermentation that occurs after a few days gives the starter its sour smell. Then it's ready to use, for years if treated with respect.</p>
+	<p>Information sourched from <a target="_blank" href="https://www.npr.org/templates/story/story.php?storyId=6061648">npr.org</a></p>
+	<br>
+	<p>For information on how to start a sourdough starter refer to this link: <a target="_blank" href="https://www.feastingathome.com/sourdough-starter/">www.feastinghome.com</a></p>
+	<br>
+
+	<h2>Recipe</h2>
+	<a href="{{ url_for('index') }}">Main</a><br>
+	<a href="{{ url_for('sourdough_ingredients') }}">Ingredients</a><br>
+	<a href="{{ url_for('sourdough_instructions') }}">Instructions</a>
+</body>
+</html>

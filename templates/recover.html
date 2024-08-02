@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Register for the website</title>
+</head>
+<body>
+    {% block content%}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    {% endblock %}
+
+    {% if username %}
+        <form action="{{ url_for('recover', username=username) }}" method="POST">
+        <table>
+                <tr>
+                    <td><label for="password">Enter new Password</label></td>
+                    <td><input name="password" id="password"></td>
+                    <td style="text-align: left; vertical-align: middle;" rowspan="2">
+                        12 characters or more<br>
+                        1 Uppercase<br>
+                        1 Lowercase<br>
+                        1 Number<br>
+                        1 Special Symbol<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="repeat">Repeat Password</label></td>
+                    <td><input name="repeat" id="repeat"></td>
+                </tr>
+                <tr>
+                    <td colspan='3'><input type="submit" name="submit_button" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+        <a href="{{ url_for('recover') }}"><img src="..\static\images\back.png"></a><br>
+
+    {% else %}
+        <h1>Register</h1>
+
+        <form action="/recover" method="POST">
+            <table>
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td><input name="username" id="username"></td>
+                    <td>Enter associated username</td>
+                </tr>
+                <tr>
+                    <td colspan='3'><input type="submit" name="submit_button" value="Next"></td>
+                </tr>
+            </table>
+        </form>
+        <a href="{{ url_for('login') }}"><img src="..\static\images\back.png"></a><br>
+
+    {% endif %}
+
+
+</body>
+</html>

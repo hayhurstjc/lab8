@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<header>
+    <title>Joshwah Bakes</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</header>
+
+<body>
+    <h1>Recipes</h1>
+    <p>
+        <ul>
+            <img src="./static/images/sourdough.jpg" height="100" width="175"/>
+            <li><a href="{{ url_for('sourdough') }}">Sourdough Bread Loaves</a></li>
+        </ul>
+    </p>
+    <h1>Upcoming Projects</h1>
+    <ul>
+        <img src="./static/images/macaroons.jpg" height="100" width="175"/>
+        <li>Macaroons</li>
+        <img src="./static/images/biscuits.jpg" height="100" width="175"/>
+        <li>Biscuits</li>
+        <img src="./static/images/cookies.jpg" height="100" width="175"/>
+        <li>Cookies</li>
+    </ul>
+</body>
+<footer>
+    <p>Joshua C. Hayhurst</p>
+    <p>SDEV300</p>
+    <p>{{ datetime }}</p>
+</footer>
+</html>

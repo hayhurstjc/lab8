@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Complete</title>
+</head>
+<body>
+  <div id="results"></div>
+    <a href="{{ url_for('login') }}">Back to Login</a><br>
+    <script>
+        const resultsList = document.getElementByID('results')
+        new URLSearchParams(window.location.search).forEach(value, name) => {
+            resultsList.append('${username}: ${value}')
+            resultsList.append(document.createElement('br'))
+        })
+    </script>
+</body>
+</html>
